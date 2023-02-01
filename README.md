@@ -7,4 +7,5 @@
 6.  Setup Local postgres DB or container, add url to env
 7.  https://next-auth.js.org/adapters/prisma
 8.  Add User and other auth related Schema
-9.  `npx prisma migrate dev`
+9.  `npx prisma migrate dev` - Runs migration and creates schema in db instance
+10. Setup Github app for oauth https://github.com/settings/developers, add Client and Secret to .env
