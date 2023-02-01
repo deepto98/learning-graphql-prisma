@@ -1,5 +1,5 @@
 import { DateTimeResolver } from "graphql-scalars";
-import { asNexusMethod, nonNull, objectType, stringArg } from "nexus";
+import { asNexusMethod, nonNull, nullable, objectType, stringArg } from "nexus";
 
 export const GQLDate = asNexusMethod(DateTimeResolver, 'date');
 
@@ -71,5 +71,28 @@ export const Query = objectType({
                 })
             }
         });
+
+        t.list.field('filterPosts', {
+            type: 'Post',
+            args: { searchString: nullable(stringArg()) },
+            async resolve(_, { searchString }, ctx) {
+                return await ctx.prisma.post.findMany({
+                    where: {
+                        OR: [
+                            {
+                                title: {
+                                    contains: searchString
+                                },
+                            },
+                            {
+                                content: {
+                                    contains: searchString
+                                },
+                            },                          
+                        ]
+                    }
+                })
+            }
+        });
     }
-})
+});
