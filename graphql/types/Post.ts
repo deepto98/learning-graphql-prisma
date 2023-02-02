@@ -8,7 +8,7 @@ export const GQLDate = asNexusMethod(DateTimeResolver, 'date');
 export const Post = objectType({
     name: 'Post',
     definition(t) {
-        t.int('id');
+        t.string('id');
         t.date('createdAt');
         t.string('title');
         t.nullable.string('content');

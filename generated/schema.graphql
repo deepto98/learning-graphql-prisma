@@ -18,7 +18,7 @@ type Post {
   author: User
   content: String
   createdAt: DateTime
-  id: Int
+  id: String
   published: Boolean
   title: String
 }

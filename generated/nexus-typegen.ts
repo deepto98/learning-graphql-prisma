@@ -56,7 +56,7 @@ export interface NexusGenObjects {
   Post: { // root type
     content?: string | null; // String
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
-    id?: number | null; // Int
+    id?: string | null; // String
     published?: boolean | null; // Boolean
     title?: string | null; // String
   }
@@ -89,7 +89,7 @@ export interface NexusGenFieldTypes {
     author: NexusGenRootTypes['User'] | null; // User
     content: string | null; // String
     createdAt: NexusGenScalars['DateTime'] | null; // DateTime
-    id: number | null; // Int
+    id: string | null; // String
     published: boolean | null; // Boolean
     title: string | null; // String
   }
@@ -119,7 +119,7 @@ export interface NexusGenFieldTypeNames {
     author: 'User'
     content: 'String'
     createdAt: 'DateTime'
-    id: 'Int'
+    id: 'String'
     published: 'Boolean'
     title: 'String'
   }
