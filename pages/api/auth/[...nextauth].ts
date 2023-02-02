@@ -9,8 +9,8 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
         adapter: PrismaAdapter(prisma),
         providers: [
             GithubProvider({
-                clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID,
-                clientSecret: process.env.GITHUB_SECRET
+                clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID!,
+                clientSecret: process.env.GITHUB_SECRET!
             })
         ],
         secret: process.env.SECRET,
