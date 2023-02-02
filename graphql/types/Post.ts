@@ -152,5 +152,18 @@ export const Mutation = objectType({
             }
         });
 
+        t.field('publish', {
+            type: 'Post',
+            args: {
+                postId: stringArg()
+            },
+            async resolve(_, { postId }, ctx) {
+                return await ctx.prisma.post.update({
+                    where: { id: Number(postId) },
+                    data: { published: true }
+                });
+            }
+        });
+
     }
 });
