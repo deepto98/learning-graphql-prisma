@@ -4,7 +4,7 @@ export const User = objectType({
     name: 'User',
     definition(t) {
         t.int('id');
-        t.string('title');
+        t.string('name');
         t.string('email');
         t.list.field('posts', {
             type: 'Post',
