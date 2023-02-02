@@ -18,7 +18,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
             strategy: 'database'
         },
         theme: {
-            colorScheme: 'auto'
+            colorScheme: 'dark',          
         },
         debug: true
     });

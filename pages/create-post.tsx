@@ -1,9 +1,9 @@
 import CreatePost from "@/components/CreatePost";
 
-const Create: React.FC = () => {
+const post: React.FC = () => {
     return (
         <CreatePost />
     )
 }
 
-export default Create;
+export default post;

@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
 
             <Menu.Item key='alipay' disabled={!session} icon={<FileAddOutlined />} style={{ marginLeft: 'auto' }}>
                 {session ? (
-                    <Link passHref href='/create'>
+                    <Link passHref href='/create-post'>
                         Create Post
                     </Link>
                 ) : (
