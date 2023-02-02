@@ -13,14 +13,14 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
                 clientSecret: process.env.GITHUB_SECRET!
             })
         ],
-        secret: process.env.SECRET,
+        // secret: process.env.SECRET,
         session: {
             strategy: 'database'
         },
         theme: {
             colorScheme: 'auto'
         },
-        debug: false
+        debug: true
     });
 
 }
